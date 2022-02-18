@@ -1,0 +1,11 @@
+{
+  "title": "Tutorials Template",
+  "description": "A tutorial on how to use the tutorials template tutorial!",
+  "pages": [
+    {
+      "link": "hello",
+      "title": "Hello World",
+      "file": "Hello World.md"
+    }
+  ]
+}
