@@ -9,9 +9,10 @@
 </template>
 
 <script lang="ts">
+import {defineComponent} from "vue";
 import {getContent} from "../converter";
 
-export default {
+export default defineComponent({
   name: "Content",
   data: () => ({
     toDisplay: '<h1>Loading...</h1>'
@@ -21,14 +22,14 @@ export default {
   },
   methods: {
     loadData() {
-      getContent(this.$route.params.id).then(content => {
+      getContent(this.$route.params.id.toString()).then(content => {
         this.toDisplay = content;
       }).catch(err => {
         this.toDisplay = `<h1>Error</h1><div>${err.stack || err.message || err}</div>`;
       });
     }
   }
-}
+});
 </script>
 
 <style scoped>
